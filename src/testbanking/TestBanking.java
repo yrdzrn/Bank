@@ -23,12 +23,14 @@ public class TestBanking {
 		Customer customer = new Customer("Smith", "Jane");
 		System.out.println("Create her account with 500.00 balance");
 		customer.setAccount(new Account(500.00));
-		System.out.println("Withdraw 150.00");
-		customer.getAccount().withdraw(150.00);
-		System.out.println("Deposit 22.50");
-		customer.getAccount().deposit(22.50);
-		System.out.println("Withdraw 47.62");
-		customer.getAccount().withdraw(47.62);
+		System.out.print("Withdraw 150.00: ");
+		System.out.println(customer.getAccount().withdraw(150.00));
+		System.out.print("Deposit 22.50: ");
+		System.out.println(customer.getAccount().deposit(22.50));
+		System.out.print("Withdraw 47.62: ");
+		System.out.println(customer.getAccount().withdraw(47.62));
+		System.out.print("Withdraw 400.00: ");
+		System.out.println(customer.getAccount().withdraw(400.00));
 		System.out.print("Customer [" + customer.getFirstName() + "," + customer.getLastName() + "] has a balance of ");
 		System.out.println(customer.getAccount().getBalance());
 	}

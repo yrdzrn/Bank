@@ -1,22 +1,24 @@
 package banking1;
 
 public class Account {
-	private double balance;
+	protected double balance;
 	public Account(double init_balance){
 		balance = init_balance;
 	}
 	public double getBalance(){
 		return balance;
 	}
-	public void deposit(double money){
+	public boolean deposit(double money){
 		balance += money;
+		return true;
 	}
-	public void withdraw (double money){
+	public boolean withdraw (double money){
 		if (money<=this.balance){			
 			balance -= money;
+			return true;
 		}
 		else{
-			System.out.println("余额不足！");
+			return false;
 		}
 	}
 }
